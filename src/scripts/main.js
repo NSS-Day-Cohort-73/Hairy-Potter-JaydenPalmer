@@ -13,25 +13,12 @@ let vase = makePottery("vase",8,3)
 let cup = makePottery("cup",7,1)
 let planter = makePottery("planter",3,8)
 
-// console.log(mug)
-// console.log(plate)
-// console.log(vase)
-// console.log(cup)
-// console.log(planter)
-
-
 // Fire each piece of pottery in the kiln
 let firedMug = firePottery(mug, 45)
 let firedPlate = firePottery(plate, 600)
 let firedVase = firePottery(vase, 2200)
 let firedCup = firePottery(cup, 800)
 let firedPlanter = firePottery(planter, 4000)
-
-// console.log(firedMug)
-// console.log(firedPlate)
-// console.log(firedVase)
-// console.log(firedCup)
-// console.log(firedPlanter)
 
 // Determine which ones should be sold, and their price
 const sellOrNoMug = toSellOrNotToSell(firedMug)
@@ -42,15 +29,8 @@ const sellOrNoPlanter = toSellOrNotToSell(firedPlanter)
 
 const availablePottery = usePottery()
 const potteryHTML = PotteryList(availablePottery)
-const potteryList = document.getElementById('pottery-list')
-potteryList.innerHTML = potteryHTML
-//console.log(potteryHTML)
-// console.log(sellOrNoCup)
-// console.log(sellOrNoMug)
-// console.log(sellOrNoPlate)
-// console.log(sellOrNoVase)
-// console.log(sellOrNoPlanter)
 
 // Invoke the component function that renders the HTML list
-
+const potteryList = document.getElementById('pottery-list')
+potteryList.innerHTML = potteryHTML
 
