@@ -2,6 +2,7 @@
 import { makePottery } from "./PotteryWheel.js"
 import { firePottery } from "./Kiln.js"
 import { toSellOrNotToSell } from "./PotteryCatalog.js"
+import { usePottery } from "./PotteryCatalog.js"
 
 
 // Make 5 pieces of pottery at the wheel
@@ -38,11 +39,13 @@ const sellOrNoVase = toSellOrNotToSell(firedVase)
 const sellOrNoCup = toSellOrNotToSell(firedCup)
 const sellOrNoPlanter = toSellOrNotToSell(firedPlanter)
 
-console.log(sellOrNoCup)
-console.log(sellOrNoMug)
-console.log(sellOrNoPlate)
-console.log(sellOrNoVase)
-console.log(sellOrNoPlanter)
+// console.log(sellOrNoCup)
+// console.log(sellOrNoMug)
+// console.log(sellOrNoPlate)
+// console.log(sellOrNoVase)
+// console.log(sellOrNoPlanter)
 
 // Invoke the component function that renders the HTML list
 
+const availablePottery = usePottery()
+console.log(availablePottery)
