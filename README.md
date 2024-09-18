@@ -120,12 +120,25 @@ In the `main.js` module, invoke the `PotteryList` component function. Take its r
 > 🧨 Before you click the "Assessment Complete" button on the Learning Platform, add your answers below for each question and make a commit. It is your option to request a face-to-face meeting with a coach for a vocabulary review.
 
 1. Explain how you got the HTML, with the correct data, displayed in the browser?
-   > Your answer here
+
+   > After each function inside each module has been invoked with the correct arguments we are 
+   left with an object of many properties. In the PotteryList module I created a function that
+   pulls information from an object using dot notation.
+   The dot notation is set to navigate throughout the object, select the correct property and plug it in to create the dynamic string of html. When PotteryList function is invoked with the availablePottery varible the string is then stored in the potteryHTML varible. Then, after grabbing the section id and assigning it on line 34 in main.js, we can use .innerHTML to render the string to the DOM.
+
 2. In the **PotteryList** module, when you iterate your pottery, you need to show the evidence of what the **weight** property's value is for the 2nd piece of pottery. Use [Loom](https://www.loom.com/) to record your browser window with the developer tools open and show those values.
-   > Paste your video's public URL here
+
+   > [Paste your video's public URL here](https://www.loom.com/share/ffbb529fd7a04af88fca0e782eda0815?sid=e0b70b63-08b3-4297-9d9a-a197c6f0a27e)
+
 3. The **PotteryWheel** module has a single function named `makePottery`. Why doesn't that module have all of the other code in it?
-   > Your answer here
+
+   > The PotteryWheel module only has the `makePottery` function for a couple of reasons. 
+   The first is organization. Having several modules of functions makes changing and updating a
+   functions functionality much easier and more readable. The second is debugging. Having the `makePottery` function separate allows for isolation when debugging and debunking. Lastly and specifically the `makePottery` function is the initial set up of our project, kind of like a login, and is seperate so it could possibly allow for input from a user.
+
 4. The pottery shop has learned that there is a set of customers that are willing to buy cracked pottery at a discounted price of $2.50. That means that the cracked pottery should now be displayed in the catalog. Explain the changes that this new business strategy would cause to your algorithm.
-   > Your answer here
+
+   > The changes that I would need to make would be located in the PotteryCatalog module in the toSellOrNotToSell function. I would eliminate my first condition on line 6 and add it as an && to both lines 7 and 12. After changing line 12 from an "else" statement to an "if else" this would allow the filter to leave only the cracked pottery to be priced at $2.50.
+
 5. In the **Kiln** module, you have a `firePottery()` function. You need to demonstrate how to use the debugger to verify the values of the parameters for that function when your code runs. Use [Loom](https://www.loom.com/) to record your browser window with the developer tools open and show those values.
-   > Paste your video's public URL here
+   > [Paste your video's public URL here](https://www.loom.com/share/8c85e5a84dfd4fd89057ba17b8bd34f0?sid=984cd340-04a0-4eb6-95a6-cfc109ec9c92)
