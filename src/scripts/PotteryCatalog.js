@@ -4,7 +4,7 @@ let sellThisPottery = []
 export const toSellOrNotToSell = (object) => {
     let potteryObject = object
     if (potteryObject.fired && !potteryObject.cracked) {
-        if (potteryObject.object.weight >= 6) {
+        if (potteryObject.weight >= 6) {
             potteryObject.price = 40
             sellThisPottery.push(potteryObject)
         }   else {
